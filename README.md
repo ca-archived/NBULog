@@ -7,7 +7,7 @@ NBULog
 
 Log framework based on CocoaLumberjack. Adds dynamic log levels, modules' support and eases usage.
 
-_Was part of [NBUCore](https://github.com/CyberAgent/iOS-NBUCore)._
+_Was part of [NBUCore](https://github.com/CyberAgent/iOS-NBUCore) 1.9.x._
 
 ### Installation
 
