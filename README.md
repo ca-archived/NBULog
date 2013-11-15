@@ -1,4 +1,3 @@
-
 NBULog
 ======
 
@@ -19,7 +18,7 @@ platform :ios, '5.0'
 
 pod 'NBULog'
 
-# Optional for on-device console
+# Optional on-device console
 pod 'LumberjackConsole'
 ```
 
