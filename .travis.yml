@@ -1,0 +1,8 @@
+
+language: objective-c
+
+script:
+- cd Demo
+- pod repo update --silent
+- pod install
+- xctool -workspace NBULogDemo.xcworkspace -scheme 'NBULogDemo' -configuration Release -sdk iphonesimulator -arch i386 build
