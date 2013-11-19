@@ -36,6 +36,7 @@ void testCLogs();
     [NBULog addDashboardLogger];
 #endif
     
+    // Set log level for a specific module
     [NBULog setAppLogLevel:LOG_LEVEL_INFO
                  forModule:APP_MODULE_NETWORK];
     
