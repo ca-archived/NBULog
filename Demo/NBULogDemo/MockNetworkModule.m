@@ -21,8 +21,8 @@
 #import "MockNetworkModule.h"
 
 // Define log module for this file
-#undef  APP_MODULE
-#define APP_MODULE APP_MODULE_NETWORK
+#undef  LOG_MODULE
+#define LOG_MODULE APP_MODULE_NETWORK
 
 @implementation MockNetworkModule
 

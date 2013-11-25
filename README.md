@@ -44,14 +44,14 @@ By default all your sources to `APP_MODULE_DEFAULT` but you can define your own 
 #define APP_MODULE_OTHER    2
 ```
 
-Then just redefine `APP_MODULE` for the files that belong to one of your custom modules.
+Then just redefine `LOG_MODULE` for the files that belong to one of your custom modules.
 
 ```obj-c
 #import "MockNetworkModule.h"
 
 // Define log module for this file
-#undef  APP_MODULE
-#define APP_MODULE APP_MODULE_NETWORK
+#undef  LOG_MODULE
+#define LOG_MODULE APP_MODULE_NETWORK
 ```
 
 Also you log a message for a different module than the one your file belongs to:
