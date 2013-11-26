@@ -44,7 +44,7 @@ static BOOL _aslLoggerAdded;
 static BOOL _fileLoggerAdded;
 
 // Configure a formatter, default levels and add default loggers
-+ (void)load
++ (void)initialize
 {
     // Default log level
     [self setAppLogLevel:LOG_LEVEL_DEFAULT];
@@ -56,6 +56,7 @@ static BOOL _fileLoggerAdded;
 #ifdef DEBUG
     [self addTTYLogger];
 #endif
+
 }
 
 + (id<DDLogFormatter>)nbuLogFormater
