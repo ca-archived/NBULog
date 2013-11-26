@@ -5,7 +5,7 @@ NBULog
 [![Version: 1.0.3](https://cocoapod-badges.herokuapp.com/v/NBULog/badge.png)](http://cocoadocs.org/docsets/NBULog/)
 [![Build Status](https://travis-ci.org/CyberAgent/iOS-NBULog.png?branch=master)](https://travis-ci.org/CyberAgent/iOS-NBULog)
 
-Log framework based on CocoaLumberjack. Adds dynamic log levels, modules' support and eases usage.
+Log framework based on [CocoaLumberjack](https://github.com/robbiehanson/CocoaLumberjack). Adds dynamic log levels, modules' support and eases usage.
 
 _Was part of [NBUCore](https://github.com/CyberAgent/iOS-NBUCore) 1.9.x._
 
