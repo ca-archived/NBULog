@@ -9,7 +9,7 @@ Log framework based on CocoaLumberjack. Adds dynamic log levels, modules' suppor
 
 _Was part of [NBUCore](https://github.com/CyberAgent/iOS-NBUCore) 1.9.x._
 
-### Installation
+## Installation
 
 Add `pod 'NBULog'` to your [CocoaPods](http://cocoapods.org)' [Podfile](http://docs.cocoapods.org/podfile.html):
 
@@ -23,9 +23,9 @@ pod 'LumberjackConsole'
 ```
 
 
-### Features
+## Features
 
-#### Dynamic Log Levels
+### Dynamic Log Levels
 
 Instead of handling a `ddLogLevel` variable set you app log level dynamically. Also works with third party libraries that support NBULog.
 
@@ -34,7 +34,7 @@ Instead of handling a `ddLogLevel` variable set you app log level dynamically. A
 [NBULog setKitLogLevel:LOG_LEVEL_WARN]; // When using NBUKit
 ```
 
-#### Modules
+### Modules
 
 By default all your sources to `APP_MODULE_DEFAULT` but you can define your own modules in your `prefix.pch` file.
 
@@ -74,7 +74,7 @@ Finally, you can also modify the log levels of individual modules.
 
 ```
 
-#### XcodeColors
+### XcodeColors
 
 ![XcodeColors](http://cyberagent.github.io/iOS-NBULog/images/xcodecolors.png)
 
@@ -97,11 +97,145 @@ When [LumberjackConsole](https://github.com/PTEz/LumberjackConsole) is present y
 #endif
 ```
 
-### Documentation
+## Usage in 3rd Party Libraries
+
+You can easily use NBULog in your library when available without making NBULog a requirement.
+
+### 1. Conditionally Use NBULog
+
+...and fallback to CocoaLumberjack or NSLog otherwise.
+
+E.g. from [NBUKit](https://github.com/CyberAgent/iOS-NBUKit):
+
+```obj-c
+//  NBUKitPrivate.h
+
+// ...
+
+// a) Use NBULog for logging when available
+#ifdef COCOAPODS_POD_AVAILABLE_NBULog
+
+#import "NBULog+NBUKit.h"
+
+#undef  LOG_CONTEXT
+#define LOG_CONTEXT NBUKIT_LOG_CONTEXT
+
+#undef  LOG_MODULE
+#define LOG_MODULE  NBUKIT_MODULE_DEFAULT
+
+#undef  LOG_LEVEL
+#define LOG_LEVEL   [NBULog kitLogLevel]
+
+// b) Else try CocoaLumberjack
+#elif defined(COCOAPODS_POD_AVAILABLE_CocoaLumberjack)
+
+#ifdef DEBUG
+    #define NBUKitLogLevel LOG_LEVEL_VERBOSE
+#else
+    #define NBUKitLogLevel LOG_LEVEL_WARN
+#endif
+
+#define LOG_LEVEL_DEF   NBUKitLogLevel
+#import <CocoaLumberjack/DDLog.h>
+
+#define NBULogError(frmt, ...)      DDLogError(frmt, ##__VA_ARGS__)
+#define NBULogWarn(frmt, ...)       DDLogWarn(frmt, ##__VA_ARGS__)
+#define NBULogInfo(frmt, ...)       DDLogInfo(frmt, ##__VA_ARGS__)
+#define NBULogDebug(frmt, ...)      DDLogDebug(frmt, ##__VA_ARGS__)
+#define NBULogVerbose(frmt, ...)    DDLogVerbose(frmt, ##__VA_ARGS__)
+#define NBULogTrace()               NBULogDebug(@"%@", THIS_METHOD)
+
+// c) Else fallback to NSLog
+#else
+
+#ifdef DEBUG
+    #define LOG_LEVEL 3
+#else
+    #define LOG_LEVEL 2
+#endif
+
+#define THIS_METHOD                 NSStringFromSelector(_cmd)
+#define NBULogError(frmt, ...)      do{ if(LOG_LEVEL >= 1) NSLog((frmt), ##__VA_ARGS__); } while(0)
+#define NBULogWarn(frmt, ...)       do{ if(LOG_LEVEL >= 2) NSLog((frmt), ##__VA_ARGS__); } while(0)
+#define NBULogInfo(frmt, ...)       do{ if(LOG_LEVEL >= 3) NSLog((frmt), ##__VA_ARGS__); } while(0)
+#define NBULogDebug(frmt, ...)      do{ if(LOG_LEVEL >= 4) NSLog((frmt), ##__VA_ARGS__); } while(0)
+#define NBULogVerbose(frmt, ...)    do{ if(LOG_LEVEL >= 5) NSLog((frmt), ##__VA_ARGS__); } while(0)
+#define NBULogTrace()               NBULogDebug(@"%@", THIS_METHOD)
+
+#endif
+```
+
+### 2. Register a Log Context and Optional Modules
+
+```obj-c
+//  NBULog+NBUKit.h
+
+#ifdef COCOAPODS_POD_AVAILABLE_NBULog
+
+#import <NBULog/NBULog.h>
+
+// NBUKit log context
+#define NBUKIT_LOG_CONTEXT          110
+
+// NBUKit modules
+#define NBUKIT_MODULE_DEFAULT       0
+
+@interface NBULog (NBUKit)
+
+// Allow to set and read the current levels.
++ (int)kitLogLevel;
++ (void)setKitLogLevel:(int)LOG_LEVEL_XXX;
+
+@end
+
+#endif
+```
+
+Then register your context and modules if you want them to appear in [LumberjackConsole](https://github.com/PTEz/LumberjackConsole).
+
+```obj-c
+//  NBULog+NBUKit.m
+
+#ifdef COCOAPODS_POD_AVAILABLE_NBULog
+
+#import "NBULog+NBUKit.h"
+#import <NBULog/NBULogContextDescription.h>
+
+@implementation NBULog (NBUKit)
+
++ (void)load
+{
+    // Register the NBUKit log context
+    [NBULog registerContextDescription:[NBULogContextDescription descriptionWithName:@"NBUKit"
+                                                                             context:NBUKIT_LOG_CONTEXT
+                                                                     modulesAndNames:nil
+                                                                   contextLevelBlock:^{ return [NBULog kitLogLevel]; }
+                                                                setContextLevelBlock:^(int level) { [NBULog setKitLogLevel:level]; }
+                                                          contextLevelForModuleBlock:NULL
+                                                       setContextLevelForModuleBlock:NULL]];
+}
+
++ (int)kitLogLevel
+{
+    // ...
+}
+
++ (void)setKitLogLevel:(int)LOG_LEVEL_XXX
+{
+    // ...
+}
+
+@end
+
+#endif
+
+```
+
+## Documentation
 
 http://cocoadocs.org/docsets/NBULog/
 
-### License
+## License
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License. 
