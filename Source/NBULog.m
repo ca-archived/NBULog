@@ -38,7 +38,6 @@ static int _appModuleLogLevel[MAX_MODULES];
 @implementation NBULog
 
 static id<DDLogFormatter> _nbuLogFormatter;
-static BOOL _dashboardLoggerAdded;
 static BOOL _ttyLoggerAdded;
 static BOOL _aslLoggerAdded;
 static BOOL _fileLoggerAdded;
@@ -109,6 +108,7 @@ static BOOL _fileLoggerAdded;
 + (void)addDashboardLogger
 {
 #ifdef COCOAPODS_POD_AVAILABLE_LumberjackConsole
+    static BOOL _dashboardLoggerAdded = NO;
     if (_dashboardLoggerAdded)
         return;
     
