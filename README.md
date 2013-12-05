@@ -9,20 +9,6 @@ Log framework based on [CocoaLumberjack](https://github.com/robbiehanson/CocoaLu
 
 _Was part of [NBUCore](https://github.com/CyberAgent/iOS-NBUCore) 1.9.x._
 
-## Installation
-
-Add `pod 'NBULog'` to your [CocoaPods](http://cocoapods.org)' [Podfile](http://docs.cocoapods.org/podfile.html):
-
-```ruby
-platform :ios, '5.0'
-
-pod 'NBULog'
-
-# Optional on-device console
-pod 'LumberjackConsole'
-```
-
-
 ## Features
 
 ### Dynamic Log Levels
@@ -80,7 +66,7 @@ Finally, you can also modify the log levels of individual modules.
 
 When installed, [XcodeColors](https://github.com/robbiehanson/XcodeColors) are automatically enabled for the Xcode console.
 
-#### On-Device Log Console and GUI to Ajust Levels
+### On-Device Log Console and GUI to Ajust Levels
 
 ![LumberjackConsole 1](http://ptez.github.io/LumberjackConsole/images/screenshot2.png)　![LumberjackConsole 2](http://ptez.github.io/LumberjackConsole/images/screenshot3.png)
 
@@ -96,6 +82,23 @@ When [LumberjackConsole](https://github.com/PTEz/LumberjackConsole) is present y
     [NBULog addDashboardLogger];
 #endif
 ```
+
+## Installation
+
+Add `pod 'NBULog'` to your [CocoaPods](http://cocoapods.org)' [Podfile](http://docs.cocoapods.org/podfile.html):
+
+```ruby
+platform :ios, '5.0'
+
+pod 'NBULog'
+
+# Optional on-device console
+pod 'LumberjackConsole'
+```
+
+## Documentation
+
+http://cocoadocs.org/docsets/NBULog/
 
 ## Usage in 3rd Party Libraries
 
@@ -230,10 +233,6 @@ Then register your context and modules if you want them to appear in [Lumberjack
 #endif
 
 ```
-
-## Documentation
-
-http://cocoadocs.org/docsets/NBULog/
 
 ## License
 
