@@ -109,7 +109,7 @@ You can easily use NBULog in your library when available without making NBULog a
 
 ...and fallback to CocoaLumberjack or NSLog otherwise.
 
-E.g. from [NBUKit](https://github.com/CyberAgent/iOS-NBUKit):
+E.g. from [NBUKit](https://github.com/CyberAgent/iOS-NBUKit)'s [`NBUKitPrivate.h`](https://github.com/CyberAgent/iOS-NBUKit/blob/master/Source/NBUKitPrivate.h):
 
 ```obj-c
 //  NBUKitPrivate.h
