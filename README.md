@@ -10,6 +10,10 @@ Log framework based on [CocoaLumberjack](https://github.com/robbiehanson/CocoaLu
 
 _Was part of [NBUCore](https://github.com/CyberAgent/iOS-NBUCore) 1.9.x._
 
+## Demo
+
+There is a NBULogDemo project included in the repository and can also be tried online [here](https://app.io/Yj1WIj).
+
 ## Features
 
 ### Dynamic Log Levels
