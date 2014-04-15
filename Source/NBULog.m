@@ -108,7 +108,7 @@ static id<DDLogFormatter> _nbuLogFormatter;
     if (_dashboardLoggerAdded)
         return;
     
-    [self addLogger:[PTEDashboard sharedDashboard].logger];
+    [PTEDashboard.sharedDashboard show];
     
     _dashboardLoggerAdded = YES;
 #else
