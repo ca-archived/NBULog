@@ -3,7 +3,7 @@
 //  LumberjackConsole
 //
 //  Created by Ernesto Rivera on 2013/10/09.
-//  Copyright (c) 2013.
+//  Copyright (c) 2013-2014 PTEz.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -18,12 +18,20 @@
 //  limitations under the License.
 //
 
+#ifdef COCOAPODS_POD_AVAILABLE_NBULog
+
 /**
  A table view used to dynamically adjust log levels.
  
  @note Enabled only when NBULog is present.
  */
 @interface PTEAdjustLevelsTableView : UITableView
+
+///@name Actions
+
+/// Called when a stepper value changes.
+/// @param sender The sender object.
+- (IBAction)stepperValueChanged:(UIStepper *)sender;
 
 @end
 
@@ -32,6 +40,8 @@
  An adjust levels' cell.
  */
 @interface PTEAdjustLevelsCell : UITableViewCell
+
+///@name Outlets
 
 /// The name of the log module.
 @property (weak, nonatomic) IBOutlet UILabel * nameLabel;
@@ -43,4 +53,6 @@
 @property (weak, nonatomic) IBOutlet UIStepper * levelStepper;
 
 @end
+
+#endif
 

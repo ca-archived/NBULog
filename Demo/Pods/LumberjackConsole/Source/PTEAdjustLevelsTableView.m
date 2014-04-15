@@ -3,7 +3,7 @@
 //  LumberjackConsole
 //
 //  Created by Ernesto Rivera on 2013/10/09.
-//  Copyright (c) 2013.
+//  Copyright (c) 2013-2014 PTEz.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -40,8 +40,6 @@
     // Init
     _orderedContexts = [NBULog orderedRegisteredContexts];
     [self restoreLogLevels];
-    [self registerNib:[UINib nibWithNibName:@"PTEAdjustLevelsCell"
-                                     bundle:nil] forCellReuseIdentifier:@"PTEAdjustLevelsCell"];
     self.dataSource = self;
 }
 
