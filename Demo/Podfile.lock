@@ -8,7 +8,7 @@ PODS:
     - CocoaLumberjack (>= 1.6.4)
     - NBUCore (>= 2.0.2)
   - NBUCore (2.0.2)
-  - NBULog (1.0.6):
+  - NBULog (1.0.7):
     - CocoaLumberjack (>= 1.6.5)
     - NBUCore (>= 2.0.2)
 
@@ -24,6 +24,6 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 020378ec400d658923bf5887178394f65f052c90
   LumberjackConsole: c4dfd11a4d4ffabbf227cc6b383db3c96dabce4e
   NBUCore: 85601dd90960d52151d19ae2a42765e0416c4dd8
-  NBULog: 8eedc0015bbf0be886ab9bf4e414653de47fa943
+  NBULog: e9e91e2bb6cc486c7888c25ec323b62dff0817da
 
-COCOAPODS: 0.31.1
+COCOAPODS: 0.32.1
