@@ -18,8 +18,6 @@
         <h1>NBULog</h1>
         <p>Log framework based on CocoaLumberjack. Adds dynamic log levels, modules&#39; support and eases usage.</p>
 
-		<iframe src="https://app.io/Yj1WIj?orientation=portrait&device=iphone5" height="607px" width="291px" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-
         <p class="view"><a href="https://github.com/CyberAgent/iOS-NBULog">View the Project on GitHub <small>CyberAgent/iOS-NBULog</small></a></p>
 
 
@@ -30,11 +28,17 @@
         </ul>
       </header>
       <section>
-        <p><a href="http://cocoadocs.org/docsets/NBULog/"><img src="https://cocoapod-badges.herokuapp.com/p/NBULog/badge.svg" alt="Platform: iOS"></a>
-<a href="http://cocoadocs.org/docsets/NBULog/"><img src="https://cocoapod-badges.herokuapp.com/v/NBULog/badge.png" alt="Version: 1.0.6"></a>
-<a href="https://travis-ci.org/CyberAgent/iOS-NBULog"><img src="https://travis-ci.org/CyberAgent/iOS-NBULog.png?branch=master" alt="Build Status"></a></p>
+        <p><a href="http://cocoadocs.org/docsets/NBULog/"><img src="https://img.shields.io/cocoapods/p/NBULog.svg?style=flat" alt="Platform: iOS"></a>
+<a href="http://cocoadocs.org/docsets/NBULog/"><img src="https://img.shields.io/cocoapods/v/NBULog.svg?style=flat" alt="Version: 1.0.8"></a>
+<a href="http://cocoadocs.org/docsets/NBULog/"><img src="https://img.shields.io/cocoapods/l/NBULog.svg?style=flat" alt="License: Apache 2.0"></a>
+<a href="https://travis-ci.org/CyberAgent/iOS-NBULog"><img src="http://img.shields.io/travis/CyberAgent/iOS-NBULog/master.svg?style=flat" alt="Build Status"></a></p>
 
 <p><em>Was part of <a href="https://github.com/CyberAgent/iOS-NBUCore">NBUCore</a> 1.9.x.</em></p>
+
+<h2>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p>There is a NBULogDemo project included in the repository and can also be tried online <a href="https://app.io/Yj1WIj">here</a>.</p>
 
 <h2>
 <a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
@@ -44,8 +48,8 @@
 
 <p>Instead of handling a <code>ddLogLevel</code> variable set you app log level dynamically. Also works with third party libraries that support NBULog.</p>
 
-<div class="highlight highlight-obj-c"><pre><span class="p">[</span><span class="n">NBULog</span> <span class="n">setAppLogLevel</span><span class="o">:</span><span class="n">LOG_LEVEL_INFO</span><span class="p">];</span>
-<span class="p">[</span><span class="n">NBULog</span> <span class="n">setKitLogLevel</span><span class="o">:</span><span class="n">LOG_LEVEL_WARN</span><span class="p">];</span> <span class="c1">// When using NBUKit</span>
+<div class="highlight highlight-obj-c"><pre><span class="p">[</span><span class="n">NBULog</span> <span class="nl">setAppLogLevel</span><span class="p">:</span><span class="n">LOG_LEVEL_INFO</span><span class="p">];</span>
+<span class="p">[</span><span class="n">NBULog</span> <span class="nl">setKitLogLevel</span><span class="p">:</span><span class="n">LOG_LEVEL_WARN</span><span class="p">];</span> <span class="c1">// When using NBUKit</span>
 </pre></div>
 
 <h3>
@@ -76,12 +80,12 @@
 <p>Finally, you can also modify the log levels of individual modules.</p>
 
 <div class="highlight highlight-obj-c"><pre><span class="c1">// Only log messages from the custom APP_MODULE_NETWORK</span>
-<span class="p">[</span><span class="n">NBULog</span> <span class="n">setAppLogLevel</span><span class="o">:</span><span class="n">LOG_LEVEL_OFF</span><span class="p">];</span>
-<span class="p">[</span><span class="n">NBULog</span> <span class="n">setAppLogLevel</span><span class="o">:</span><span class="n">LOG_LEVEL_INFO</span>
-                 <span class="nl">forModule:</span><span class="n">APP_MODULE_NETWORK</span><span class="p">];</span>
+<span class="p">[</span><span class="n">NBULog</span> <span class="nl">setAppLogLevel</span><span class="p">:</span><span class="n">LOG_LEVEL_OFF</span><span class="p">];</span>
+<span class="p">[</span><span class="n">NBULog</span> <span class="nl">setAppLogLevel</span><span class="p">:</span><span class="n">LOG_LEVEL_INFO</span>
+                 <span class="nl">forModule</span><span class="p">:</span><span class="n">APP_MODULE_NETWORK</span><span class="p">];</span>
 
-<span class="p">[</span><span class="n">NBULog</span> <span class="n">setKitLogLevel</span><span class="o">:</span><span class="n">LOG_LEVEL_WARN</span>
-             <span class="nl">forModule:</span><span class="n">NBUKIT_MODULE_ADDITIONS</span><span class="p">];</span> <span class="c1">// When using NBUKit</span>
+<span class="p">[</span><span class="n">NBULog</span> <span class="nl">setKitLogLevel</span><span class="p">:</span><span class="n">LOG_LEVEL_WARN</span>
+             <span class="nl">forModule</span><span class="p">:</span><span class="n">NBUKIT_MODULE_ADDITIONS</span><span class="p">];</span> <span class="c1">// When using NBUKit</span>
 
 </pre></div>
 
@@ -101,8 +105,8 @@
 
 <div class="highlight highlight-obj-c"><pre><span class="cp">#ifndef MY_PRODUCTION_MACRO</span>
     <span class="c1">// Register custom modules before adding the dashboard</span>
-    <span class="p">[</span><span class="n">NBULog</span> <span class="n">registerAppContextWithModulesAndNames</span><span class="o">:</span><span class="p">@{@(</span><span class="n">APP_MODULE_NETWORK</span><span class="p">)</span>   <span class="o">:</span> <span class="s">@"Network"</span><span class="p">,</span>
-                                                    <span class="p">@(</span><span class="n">APP_MODULE_OTHER</span><span class="p">)</span>     <span class="o">:</span> <span class="s">@"Other"</span><span class="p">}];</span>
+    <span class="p">[</span><span class="n">NBULog</span> <span class="nl">registerAppContextWithModulesAndNames</span><span class="p">:</span><span class="l">@{@(</span><span class="n">APP_MODULE_NETWORK</span><span class="l">)</span>   <span class="o">:</span> <span class="s">@"Network"</span><span class="p">,</span>
+                                                    <span class="l">@(</span><span class="n">APP_MODULE_OTHER</span><span class="l">)</span>     <span class="o">:</span> <span class="s">@"Other"</span><span class="l">}</span><span class="p">];</span>
 
     <span class="c1">// Add dashboard only for testing builds</span>
     <span class="p">[</span><span class="n">NBULog</span> <span class="n">addDashboardLogger</span><span class="p">];</span>
@@ -214,8 +218,8 @@
 <span class="k">@interface</span> <span class="nc">NBULog</span> <span class="nl">(NBUKit)</span>
 
 <span class="c1">// Allow to set and read the current levels.</span>
-<span class="k">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nf">kitLogLevel</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setKitLogLevel:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nv">LOG_LEVEL_XXX</span><span class="p">;</span>
+<span class="p">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nf">kitLogLevel</span><span class="p">;</span>
+<span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setKitLogLevel:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nv">LOG_LEVEL_XXX</span><span class="p">;</span>
 
 <span class="k">@end</span>
 
@@ -233,24 +237,24 @@
 
 <span class="k">@implementation</span> <span class="nc">NBULog</span> <span class="nl">(NBUKit)</span>
 
-<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">load</span>
+<span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">load</span>
 <span class="p">{</span>
     <span class="c1">// Register the NBUKit log context</span>
-    <span class="p">[</span><span class="n">NBULog</span> <span class="n">registerContextDescription</span><span class="o">:</span><span class="p">[</span><span class="n">NBULogContextDescription</span> <span class="n">descriptionWithName</span><span class="o">:</span><span class="s">@"NBUKit"</span>
-                                                                             <span class="nl">context:</span><span class="n">NBUKIT_LOG_CONTEXT</span>
-                                                                     <span class="nl">modulesAndNames:</span><span class="nb">nil</span>
-                                                                   <span class="nl">contextLevelBlock:</span><span class="o">^</span><span class="p">{</span> <span class="k">return</span> <span class="p">[</span><span class="n">NBULog</span> <span class="n">kitLogLevel</span><span class="p">];</span> <span class="p">}</span>
-                                                                <span class="nl">setContextLevelBlock:</span><span class="o">^</span><span class="p">(</span><span class="kt">int</span> <span class="n">level</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="n">NBULog</span> <span class="n">setKitLogLevel</span><span class="o">:</span><span class="n">level</span><span class="p">];</span> <span class="p">}</span>
-                                                          <span class="nl">contextLevelForModuleBlock:</span><span class="nb">NULL</span>
-                                                       <span class="nl">setContextLevelForModuleBlock:</span><span class="nb">NULL</span><span class="p">]];</span>
+    <span class="p">[</span><span class="n">NBULog</span> <span class="nl">registerContextDescription</span><span class="p">:[</span><span class="n">NBULogContextDescription</span> <span class="nl">descriptionWithName</span><span class="p">:</span><span class="s">@"NBUKit"</span>
+                                                                             <span class="nl">context</span><span class="p">:</span><span class="n">NBUKIT_LOG_CONTEXT</span>
+                                                                     <span class="nl">modulesAndNames</span><span class="p">:</span><span class="nb">nil</span>
+                                                                   <span class="nl">contextLevelBlock</span><span class="p">:</span><span class="o">^</span><span class="p">{</span> <span class="k">return</span> <span class="p">[</span><span class="n">NBULog</span> <span class="n">kitLogLevel</span><span class="p">];</span> <span class="p">}</span>
+                                                                <span class="nl">setContextLevelBlock</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">int</span> <span class="n">level</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="n">NBULog</span> <span class="nl">setKitLogLevel</span><span class="p">:</span><span class="n">level</span><span class="p">];</span> <span class="p">}</span>
+                                                          <span class="nl">contextLevelForModuleBlock</span><span class="p">:</span><span class="nb">NULL</span>
+                                                       <span class="nl">setContextLevelForModuleBlock</span><span class="p">:</span><span class="nb">NULL</span><span class="p">]];</span>
 <span class="p">}</span>
 
-<span class="k">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nf">kitLogLevel</span>
+<span class="p">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nf">kitLogLevel</span>
 <span class="p">{</span>
     <span class="c1">// ...</span>
 <span class="p">}</span>
 
-<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setKitLogLevel:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nv">LOG_LEVEL_XXX</span>
+<span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setKitLogLevel:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nv">LOG_LEVEL_XXX</span>
 <span class="p">{</span>
     <span class="c1">// ...</span>
 <span class="p">}</span>
