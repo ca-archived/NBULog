@@ -13,7 +13,7 @@ _Was part of [NBUCore](https://github.com/CyberAgent/iOS-NBUCore) 1.9.x._
 
 ## Demo
 
-There is a NBULogDemo project included in the repository and can also be tried online [here](https://app.io/Yj1WIj).
+A demo project is included in the repository and can also be tried online [here](https://app.io/Yj1WIj).
 
 ## Features
 
@@ -91,7 +91,7 @@ When [LumberjackConsole](https://github.com/PTEz/LumberjackConsole) is present y
 
 ## Installation
 
-Add `pod 'NBULog'` to your [CocoaPods](http://cocoapods.org)' [Podfile](http://docs.cocoapods.org/podfile.html):
+Add `pod 'NBULog'` to your [CocoaPods](http://cocoapods.org)' [Podfile](http://guides.cocoapods.org/syntax/podfile.html):
 
 ```ruby
 platform :ios, '5.0'
