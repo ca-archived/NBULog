@@ -1,15 +1,15 @@
 PODS:
-  - CocoaLumberjack (1.9.1):
+  - CocoaLumberjack (1.9.2):
     - CocoaLumberjack/Extensions
-  - CocoaLumberjack/Core (1.9.1)
-  - CocoaLumberjack/Extensions (1.9.1):
+  - CocoaLumberjack/Core (1.9.2)
+  - CocoaLumberjack/Extensions (1.9.2):
     - CocoaLumberjack/Core
   - LumberjackConsole (2.0.2):
     - CocoaLumberjack (>= 1.6.4)
     - NBUCore (>= 2.0.2)
   - NBUCore (2.0.2)
-  - NBULog (1.0.8):
-    - CocoaLumberjack (>= 1.6.5)
+  - NBULog (1.0.9):
+    - CocoaLumberjack (< 2.0.0)
     - NBUCore (>= 2.0.2)
 
 DEPENDENCIES:
@@ -21,9 +21,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: 94accd5749f5c5d15134c8d50f34a973aed8ef69
+  CocoaLumberjack: 205769c032b5fef85b92472046bcc8b7e7c8a817
   LumberjackConsole: 4b0fb07c89d292d91f01af21b1e973a8c52795b3
   NBUCore: 040cd60a1407bffd3dd6141b2b467125fe1631fa
-  NBULog: 56f15ab63ad11b11af3fc8f824dac7a2d75bdf9a
+  NBULog: 4df115a583837f40631aa8cbf3791dffcb8a7b65
 
 COCOAPODS: 0.33.1
