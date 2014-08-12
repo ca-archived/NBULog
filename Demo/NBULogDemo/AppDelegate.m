@@ -79,14 +79,12 @@ void testCLogs();
 
 #pragma mark - Logs from C functions
 
-#import <NBULog/NBULog+CFunctions.h>
-
 void testCLogs()
 {
-    NBULogCTrace();
-    NBULogCVerbose(@"Verbose message from a C function");
-    NBULogCInfo(@"Info message from a C function");
-    NBULogCWarn(@"Warning message from a C function");
-    NBULogCError(@"Error message from a C function");
+    NBULogTrace();
+    NBULogVerbose(@"Verbose message from a C function");
+    NBULogInfo(@"Info message from a C function");
+    NBULogWarn(@"Warning message from a C function");
+    NBULogError(@"Error message from a C function");
 }
 

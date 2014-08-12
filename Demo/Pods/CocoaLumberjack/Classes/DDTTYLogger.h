@@ -1,4 +1,8 @@
-#import <Foundation/Foundation.h>
+//
+//  DDTTYLogger.h
+//  CocoaLumberjack
+//
+
 #if TARGET_OS_IPHONE
 #import <UIKit/UIColor.h>   // iOS
 #elif !defined (COCOAPODS_POD_AVAILABLE_CocoaLumberjack_CLI)
@@ -12,7 +16,7 @@
 #define LOG_CONTEXT_ALL INT_MAX
 
 /**
- * Welcome to Cocoa Lumberjack!
+ * Welcome to CocoaLumberjack!
  * 
  * The project page has a wealth of documentation if you have any questions.
  * https://github.com/CocoaLumberjack/CocoaLumberjack

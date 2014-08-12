@@ -1,3 +1,8 @@
+//
+//  DDLogFileManager.m
+//  CocoaLumberjack
+//
+
 #import "DDFileLogger.h"
 
 #import <unistd.h>
@@ -6,7 +11,7 @@
 #import <libkern/OSAtomic.h>
 
 /**
- * Welcome to Cocoa Lumberjack!
+ * Welcome to CocoaLumberjack!
  * 
  * The project page has a wealth of documentation if you have any questions.
  * https://github.com/CocoaLumberjack/CocoaLumberjack
