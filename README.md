@@ -3,7 +3,7 @@ NBULog
 ======
 
 [![Platform: iOS](https://img.shields.io/cocoapods/p/NBULog.svg?style=flat)](http://cocoadocs.org/docsets/NBULog/)
-[![Version: 1.0.9](https://img.shields.io/cocoapods/v/NBULog.svg?style=flat)](http://cocoadocs.org/docsets/NBULog/)
+[![Version: 1.1.0](https://img.shields.io/cocoapods/v/NBULog.svg?style=flat)](http://cocoadocs.org/docsets/NBULog/)
 [![License: Apache 2.0](https://img.shields.io/cocoapods/l/NBULog.svg?style=flat)](http://cocoadocs.org/docsets/NBULog/)
 [![Build Status](http://img.shields.io/travis/CyberAgent/iOS-NBULog/master.svg?style=flat)](https://travis-ci.org/CyberAgent/iOS-NBULog)
 
