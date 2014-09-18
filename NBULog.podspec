@@ -14,7 +14,8 @@ Pod::Spec.new do |s|
                         "http://ptez.github.io/LumberjackConsole/images/screenshot3.png" ]
     s.source        = { :git => "https://github.com/CyberAgent/iOS-NBULog.git", :tag => "#{s.version}" }
     
-    s.platform      = :ios, '5.0'
+    s.ios.deployment_target = '5.0'
+    s.osx.deployment_target = '10.7'
     s.requires_arc  = true
     s.source_files  = 'Source/*.{h,m}'
     s.preserve_paths = "README.md", "NOTICE"
