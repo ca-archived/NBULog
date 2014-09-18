@@ -1,0 +1,12 @@
+
+platform :osx, '10.7'
+
+# For regular projects
+#pod 'NBULog'
+
+# Optional for on-device log console
+pod 'LumberjackConsole'
+
+# For development
+pod 'NBULog', :path => '../'
+
