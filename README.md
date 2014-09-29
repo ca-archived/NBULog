@@ -14,7 +14,7 @@ _Was part of [NBUCore](https://github.com/CyberAgent/iOS-NBUCore) 1.9.x._
 
 ## Demo
 
-A demo project is included in the repository and can also be tried online [here](https://app.io/Yj1WIj).
+A demo project is [included](Demo) in the repository.
 
 ## Features
 
@@ -123,7 +123,7 @@ E.g. from [NBUKit](https://github.com/CyberAgent/iOS-NBUKit)'s [`NBUKitPrivate.h
 // ...
 
 // a) Use NBULog for logging when available
-#ifdef COCOAPODS_POD_AVAILABLE_NBULog
+#if __has_include("NBULog.h")
 
 #import "NBULog+NBUKit.h"
 
@@ -137,7 +137,7 @@ E.g. from [NBUKit](https://github.com/CyberAgent/iOS-NBUKit)'s [`NBUKitPrivate.h
 #define LOG_LEVEL   [NBULog kitLogLevel]
 
 // b) Else try CocoaLumberjack
-#elif defined(COCOAPODS_POD_AVAILABLE_CocoaLumberjack)
+#elif __has_include("DDLog.h")
 
 #ifdef DEBUG
     #define NBUKitLogLevel LOG_LEVEL_VERBOSE
@@ -180,7 +180,7 @@ E.g. from [NBUKit](https://github.com/CyberAgent/iOS-NBUKit)'s [`NBUKitPrivate.h
 ```obj-c
 //  NBULog+NBUKit.h
 
-#ifdef COCOAPODS_POD_AVAILABLE_NBULog
+#if __has_include("NBULog.h")
 
 #import <NBULog/NBULog.h>
 
@@ -206,7 +206,7 @@ Then register your context and modules if you want them to appear in [Lumberjack
 ```obj-c
 //  NBULog+NBUKit.m
 
-#ifdef COCOAPODS_POD_AVAILABLE_NBULog
+#if __has_include("NBULog.h")
 
 #import "NBULog+NBUKit.h"
 #import <NBULog/NBULogContextDescription.h>
