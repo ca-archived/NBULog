@@ -44,19 +44,22 @@ static id<DDLogFormatter> _nbuLogFormatter;
 // Configure a formatter, default levels and add default loggers
 + (void)initialize
 {
-    // By defeault do not foce sync logging
-    [self setForceSyncLogging:NO];
-    
-    // Default log level
-    [self setAppLogLevel:LOG_LEVEL_DEFAULT];
-    
-    // Register the App log context
-    [NBULog registerAppContextWithModulesAndNames:nil];
-    
-    // Default loggers
+    if (self == [NBULog class])
+    {
+        // By defeault do not foce sync logging
+        [self setForceSyncLogging:NO];
+        
+        // Default log level
+        [self setAppLogLevel:LOG_LEVEL_DEFAULT];
+        
+        // Register the App log context
+        [NBULog registerAppContextWithModulesAndNames:nil];
+        
+        // Default loggers
 #ifdef DEBUG
-    [self addTTYLogger];
+        [self addTTYLogger];
 #endif
+    }
 }
 
 + (id<DDLogFormatter>)nbuLogFormater

@@ -26,7 +26,10 @@ static NSString * _processName;
 
 + (void)initialize
 {
-    _processName = [[NSProcessInfo processInfo] processName];
+    if (self == [NBULogFormatter class])
+    {
+        _processName = [[NSProcessInfo processInfo] processName];
+    }
 }
 
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage
