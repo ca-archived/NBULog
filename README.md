@@ -6,7 +6,7 @@ NBULog
 [![Version: 1.2.0](https://img.shields.io/cocoapods/v/NBULog.svg?style=flat)](http://cocoadocs.org/docsets/NBULog/)
 [![License: Apache 2.0](https://img.shields.io/cocoapods/l/NBULog.svg?style=flat)](http://cocoadocs.org/docsets/NBULog/)
 [![Dependency Status](https://www.versioneye.com/objective-c/NBULog/badge.svg?style=flat)](https://www.versioneye.com/objective-c/NBULog)
-[![Build Status](http://img.shields.io/travis/CyberAgent/iOS-NBULog/master.svg?style=flat)](https://travis-ci.org/CyberAgent/iOS-NBULog)
+[![Build Status](http://img.shields.io/travis/CyberAgent/NBULog/master.svg?style=flat)](https://travis-ci.org/CyberAgent/NBULog)
 
 Log framework based on [CocoaLumberjack](https://github.com/robbiehanson/CocoaLumberjack). Adds dynamic log levels, modules' support and eases usage.
 
@@ -69,7 +69,7 @@ Finally, you can also modify the log levels of individual modules.
 
 ### XcodeColors
 
-![XcodeColors](http://cyberagent.github.io/iOS-NBULog/images/xcodecolors.png)
+![XcodeColors](http://cyberagent.github.io/NBULog/images/xcodecolors.png)
 
 When installed, [XcodeColors](https://github.com/robbiehanson/XcodeColors) are automatically enabled for the Xcode console.
 
