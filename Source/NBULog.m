@@ -158,31 +158,31 @@ static id<DDLogFormatter> _nbuLogFormatter;
                       if (xcode_colors && (strcmp(xcode_colors, "YES") == 0))
                       {
                           // Set default colors
-                          [ttyLogger setForegroundColor:[UIColor colorWithRed:0.65
+                          [ttyLogger setForegroundColor:[DDColor colorWithRed:0.65
                                                                         green:0.65
                                                                          blue:0.65
                                                                         alpha:1.0]
                                         backgroundColor:nil
                                                 forFlag:LOG_FLAG_VERBOSE];
-                          [ttyLogger setForegroundColor:[UIColor colorWithRed:0.4
+                          [ttyLogger setForegroundColor:[DDColor colorWithRed:0.4
                                                                         green:0.4
                                                                          blue:0.4
                                                                         alpha:1.0]
                                         backgroundColor:nil
                                                 forFlag:LOG_FLAG_DEBUG];
-                          [ttyLogger setForegroundColor:[UIColor colorWithRed:26.0/255.0
+                          [ttyLogger setForegroundColor:[DDColor colorWithRed:26.0/255.0
                                                                         green:158.0/255.0
                                                                          blue:4.0/255.0
                                                                         alpha:1.0]
                                         backgroundColor:nil
                                                 forFlag:LOG_FLAG_INFO];
-                          [ttyLogger setForegroundColor:[UIColor colorWithRed:244.0/255.0
+                          [ttyLogger setForegroundColor:[DDColor colorWithRed:244.0/255.0
                                                                         green:103.0/255.0
                                                                          blue:8.0/255.0
                                                                         alpha:1.0]
                                         backgroundColor:nil
                                                 forFlag:LOG_FLAG_WARN];
-                          [ttyLogger setForegroundColor:[UIColor redColor]
+                          [ttyLogger setForegroundColor:[DDColor redColor]
                                         backgroundColor:nil
                                                 forFlag:LOG_FLAG_ERROR];
                           
