@@ -10,6 +10,9 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (weak, nonatomic) IBOutlet NSWindow * window;
+
+- (IBAction)buttonClicked:(NSButton *)sender;
 
 @end
 

@@ -1,11 +1,9 @@
 
 platform :osx, '10.7'
+source 'https://github.com/CocoaPods/Specs.git'
 
 # For regular projects
 #pod 'NBULog'
-
-# Optional for on-device log console
-pod 'LumberjackConsole'
 
 # For development
 pod 'NBULog', :path => '../'
