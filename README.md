@@ -23,8 +23,8 @@ iOS and OS X demo projects are [included](Demo) in the repository.
 Instead of handling a `ddLogLevel` variable set you app log level dynamically. Also works with third party libraries that support NBULog.
 
 ```obj-c
-[NBULog setAppLogLevel:LOG_LEVEL_INFO];
-[NBULog setKitLogLevel:LOG_LEVEL_WARN]; // When using NBUKit
+[NBULog setAppLogLevel:DDLogLevelInfo];
+[NBULog setKitLogLevel:DDLogLevelWarning]; // When using NBUKit
 ```
 
 ### Modules
@@ -58,11 +58,11 @@ Finally, you can also modify the log levels of individual modules.
 
 ```obj-c
 // Only log messages from the custom APP_MODULE_NETWORK
-[NBULog setAppLogLevel:LOG_LEVEL_OFF];
-[NBULog setAppLogLevel:LOG_LEVEL_INFO
-                 forModule:APP_MODULE_NETWORK];
+[NBULog setAppLogLevel:DDLogLevelOff];
+[NBULog setAppLogLevel:DDLogLevelInfo
+             forModule:APP_MODULE_NETWORK];
 
-[NBULog setKitLogLevel:LOG_LEVEL_WARN
+[NBULog setKitLogLevel:DDLogLevelWarning
              forModule:NBUKIT_MODULE_ADDITIONS]; // When using NBUKit
 
 ```
@@ -140,9 +140,9 @@ E.g. from [NBUKit](https://github.com/CyberAgent/iOS-NBUKit)'s [`NBUKitPrivate.h
 #elif __has_include("DDLog.h")
 
 #ifdef DEBUG
-    #define NBUKitLogLevel LOG_LEVEL_VERBOSE
+    #define NBUKitLogLevel DDLogLevelVerbose
 #else
-    #define NBUKitLogLevel LOG_LEVEL_WARN
+    #define NBUKitLogLevel DDLogLevelWarning
 #endif
 
 #define LOG_LEVEL_DEF   NBUKitLogLevel
@@ -193,8 +193,8 @@ E.g. from [NBUKit](https://github.com/CyberAgent/iOS-NBUKit)'s [`NBUKitPrivate.h
 @interface NBULog (NBUKit)
 
 // Allow to set and read the current levels.
-+ (int)kitLogLevel;
-+ (void)setKitLogLevel:(int)LOG_LEVEL_XXX;
++ (DDLogLevel)kitLogLevel;
++ (void)setKitLogLevel:(DDLogLevel)logLevel;
 
 @end
 
@@ -225,12 +225,12 @@ Then register your context and modules if you want them to appear in [Lumberjack
                                                        setContextLevelForModuleBlock:NULL]];
 }
 
-+ (int)kitLogLevel
++ (DDLogLevel)kitLogLevel
 {
     // ...
 }
 
-+ (void)setKitLogLevel:(int)LOG_LEVEL_XXX
++ (void)setKitLogLevel:(DDLogLevel)logLevel
 {
     // ...
 }
