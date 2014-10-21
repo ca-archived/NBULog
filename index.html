@@ -18,29 +18,28 @@
         <h1>NBULog</h1>
         <p>Log framework based on CocoaLumberjack. Adds dynamic log levels, modules&#39; support and eases usage.</p>
 
-		<iframe src="https://app.io/Yj1WIj?orientation=portrait&device=iphone5" height="607px" width="291px" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-
-        <p class="view"><a href="https://github.com/CyberAgent/iOS-NBULog">View the Project on GitHub <small>CyberAgent/iOS-NBULog</small></a></p>
+        <p class="view"><a href="https://github.com/CyberAgent/NBULog">View the Project on GitHub <small>CyberAgent/NBULog</small></a></p>
 
 
         <ul>
-          <li><a href="https://github.com/CyberAgent/iOS-NBULog/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/CyberAgent/iOS-NBULog/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/CyberAgent/iOS-NBULog">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/CyberAgent/NBULog/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/CyberAgent/NBULog/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/CyberAgent/NBULog">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
-        <p><a href="http://cocoadocs.org/docsets/NBULog/"><img src="https://img.shields.io/cocoapods/p/NBULog.svg?style=flat" alt="Platform: iOS"></a>
-<a href="http://cocoadocs.org/docsets/NBULog/"><img src="https://img.shields.io/cocoapods/v/NBULog.svg?style=flat" alt="Version: 1.0.8"></a>
+        <p><a href="http://cocoadocs.org/docsets/NBULog/"><img src="https://img.shields.io/cocoapods/p/NBULog.svg?style=flat" alt="Platform: iOS/OSX"></a>
+<a href="http://cocoadocs.org/docsets/NBULog/"><img src="https://img.shields.io/cocoapods/v/NBULog.svg?style=flat" alt="Version: 1.2.0"></a>
 <a href="http://cocoadocs.org/docsets/NBULog/"><img src="https://img.shields.io/cocoapods/l/NBULog.svg?style=flat" alt="License: Apache 2.0"></a>
-<a href="https://travis-ci.org/CyberAgent/iOS-NBULog"><img src="http://img.shields.io/travis/CyberAgent/iOS-NBULog/master.svg?style=flat" alt="Build Status"></a></p>
+<a href="https://www.versioneye.com/objective-c/NBULog"><img src="https://www.versioneye.com/objective-c/NBULog/badge.svg?style=flat" alt="Dependency Status"></a>
+<a href="https://travis-ci.org/CyberAgent/NBULog"><img src="http://img.shields.io/travis/CyberAgent/NBULog/master.svg?style=flat" alt="Build Status"></a></p>
 
 <p><em>Was part of <a href="https://github.com/CyberAgent/iOS-NBUCore">NBUCore</a> 1.9.x.</em></p>
 
 <h2>
 <a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
 
-<p>There is a NBULogDemo project included in the repository and can also be tried online <a href="https://app.io/Yj1WIj">here</a>.</p>
+<p>iOS and OS X demo projects are <a href="Demo">included</a> in the repository.</p>
 
 <h2>
 <a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
@@ -94,7 +93,7 @@
 <h3>
 <a name="xcodecolors" class="anchor" href="#xcodecolors"><span class="octicon octicon-link"></span></a>XcodeColors</h3>
 
-<p><img src="http://cyberagent.github.io/iOS-NBULog/images/xcodecolors.png" alt="XcodeColors"></p>
+<p><img src="http://cyberagent.github.io/NBULog/images/xcodecolors.png" alt="XcodeColors"></p>
 
 <p>When installed, <a href="https://github.com/robbiehanson/XcodeColors">XcodeColors</a> are automatically enabled for the Xcode console.</p>
 
@@ -118,7 +117,7 @@
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<p>Add <code>pod 'NBULog'</code> to your <a href="http://cocoapods.org">CocoaPods</a>' <a href="http://docs.cocoapods.org/podfile.html">Podfile</a>:</p>
+<p>Add <code>pod 'NBULog'</code> to your <a href="http://cocoapods.org">CocoaPods</a>' <a href="http://guides.cocoapods.org/syntax/podfile.html">Podfile</a>:</p>
 
 <div class="highlight highlight-ruby"><pre><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'5.0'</span>
 
@@ -150,7 +149,7 @@
 <span class="c1">// ...</span>
 
 <span class="c1">// a) Use NBULog for logging when available</span>
-<span class="cp">#ifdef COCOAPODS_POD_AVAILABLE_NBULog</span>
+<span class="cp">#if __has_include("NBULog.h")</span>
 
 <span class="cp">#import "NBULog+NBUKit.h"</span>
 
@@ -164,7 +163,7 @@
 <span class="cp">#define LOG_LEVEL   [NBULog kitLogLevel]</span>
 
 <span class="c1">// b) Else try CocoaLumberjack</span>
-<span class="cp">#elif defined(COCOAPODS_POD_AVAILABLE_CocoaLumberjack)</span>
+<span class="cp">#elif __has_include("DDLog.h")</span>
 
 <span class="cp">#ifdef DEBUG</span>
 <span class="cp">    #define NBUKitLogLevel LOG_LEVEL_VERBOSE</span>
@@ -207,7 +206,7 @@
 
 <div class="highlight highlight-obj-c"><pre><span class="c1">//  NBULog+NBUKit.h</span>
 
-<span class="cp">#ifdef COCOAPODS_POD_AVAILABLE_NBULog</span>
+<span class="cp">#if __has_include("NBULog.h")</span>
 
 <span class="cp">#import &lt;NBULog/NBULog.h&gt;</span>
 
@@ -232,7 +231,7 @@
 
 <div class="highlight highlight-obj-c"><pre><span class="c1">//  NBULog+NBUKit.m</span>
 
-<span class="cp">#ifdef COCOAPODS_POD_AVAILABLE_NBULog</span>
+<span class="cp">#if __has_include("NBULog.h")</span>
 
 <span class="cp">#import "NBULog+NBUKit.h"</span>
 <span class="cp">#import &lt;NBULog/NBULogContextDescription.h&gt;</span>
@@ -270,7 +269,9 @@
 <h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
-<pre><code>Licensed under the Apache License, Version 2.0 (the "License");
+<pre><code>Copyright 2012-2014 CyberAgent Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. 
 You may obtain a copy of the License at
 
