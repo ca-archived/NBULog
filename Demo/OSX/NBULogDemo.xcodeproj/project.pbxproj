@@ -20,8 +20,8 @@
 		AEA0CBED3178E90CA0D6D3AD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E5ABB5C219F5176B0054B6BC /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		E5ABB5C419F519760054B6BC /* NBULogDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NBULogDemo-Prefix.pch"; sourceTree = "<group>"; };
-		E5ABB5C519F519F00054B6BC /* MockNetworkModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MockNetworkModule.h; path = ../../Demo/NBULogDemo/MockNetworkModule.h; sourceTree = "<group>"; };
-		E5ABB5C619F519F00054B6BC /* MockNetworkModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MockNetworkModule.m; path = ../../Demo/NBULogDemo/MockNetworkModule.m; sourceTree = "<group>"; };
+		E5ABB5C519F519F00054B6BC /* MockNetworkModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MockNetworkModule.h; path = ../../iOS/NBULogDemo/MockNetworkModule.h; sourceTree = "<group>"; };
+		E5ABB5C619F519F00054B6BC /* MockNetworkModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MockNetworkModule.m; path = ../../iOS/NBULogDemo/MockNetworkModule.m; sourceTree = "<group>"; };
 		E5C4BA7219CAE60A003250FB /* NBULogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBULogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C4BA7619CAE60A003250FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5C4BA7719CAE60A003250FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
