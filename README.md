@@ -2,8 +2,8 @@
 NBULog
 ======
 
-[![Platform: iOS](https://img.shields.io/cocoapods/p/NBULog.svg?style=flat)](http://cocoadocs.org/docsets/NBULog/)
-[![Version: 1.1.1](https://img.shields.io/cocoapods/v/NBULog.svg?style=flat)](http://cocoadocs.org/docsets/NBULog/)
+[![Platform: iOS/OSX](https://img.shields.io/cocoapods/p/NBULog.svg?style=flat)](http://cocoadocs.org/docsets/NBULog/)
+[![Version: 1.2.0](https://img.shields.io/cocoapods/v/NBULog.svg?style=flat)](http://cocoadocs.org/docsets/NBULog/)
 [![License: Apache 2.0](https://img.shields.io/cocoapods/l/NBULog.svg?style=flat)](http://cocoadocs.org/docsets/NBULog/)
 [![Dependency Status](https://www.versioneye.com/objective-c/NBULog/badge.svg?style=flat)](https://www.versioneye.com/objective-c/NBULog)
 [![Build Status](http://img.shields.io/travis/CyberAgent/iOS-NBULog/master.svg?style=flat)](https://travis-ci.org/CyberAgent/iOS-NBULog)
@@ -14,7 +14,7 @@ _Was part of [NBUCore](https://github.com/CyberAgent/iOS-NBUCore) 1.9.x._
 
 ## Demo
 
-A demo project is [included](Demo) in the repository.
+iOS and OS X demo projects are [included](Demo) in the repository.
 
 ## Features
 
