@@ -9,7 +9,10 @@ before_install:
 
 script:
     - pod lib lint
-    - cd Demo
     - pod repo update --silent
+    - cd Demo/iOS
     - pod update
     - xctool -workspace NBULogDemo.xcworkspace -scheme 'NBULogDemo' -configuration Release -sdk iphonesimulator -arch i386 build
+    - cd ../OSX
+    - pod update
+    - xctool -workspace NBULogDemo.xcworkspace -scheme 'NBULogDemo' -configuration Release
