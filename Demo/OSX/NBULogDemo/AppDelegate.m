@@ -14,7 +14,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Set log level for a specific module
-    [NBULog setAppLogLevel:LOG_LEVEL_INFO
+    [NBULog setAppLogLevel:DDLogLevelInfo
                  forModule:APP_MODULE_NETWORK];
     
     // Test logs from C functions

@@ -7,7 +7,7 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.0.0-beta3):
     - CocoaLumberjack/Default
-  - NBULog (1.2.0):
+  - NBULog (1.2.1):
     - CocoaLumberjack (>= 2.0.0-beta3)
 
 DEPENDENCIES:
@@ -19,6 +19,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 55c22a2b8bde7a29c568ab4015b5874216524d70
-  NBULog: 410db30aac8002d9a598d1f9782e39588ab225da
+  NBULog: 66a904207482e63b06d16dafaa22fb744c3c4372
 
 COCOAPODS: 0.34.4
