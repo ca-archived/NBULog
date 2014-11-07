@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
     
     s.name          = "NBULog"
-    s.version       = "1.2.1"
+    s.version       = "1.2.2"
     s.summary       = "Log framework based on CocoaLumberjack. Adds dynamic log levels, modules' support and eases usage."
     s.homepage      = "http://cyberagent.github.io/NBULog/"
     
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     s.source_files  = 'Source/*.{h,m}'
     s.preserve_paths = "README.md", "NOTICE"
     
-    s.dependency 'CocoaLumberjack', '>= 2.0.0-beta3'
+    s.dependency 'CocoaLumberjack', '>= 2.0.0-beta4'
 
 end
 
