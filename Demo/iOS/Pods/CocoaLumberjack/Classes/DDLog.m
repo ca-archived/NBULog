@@ -1,6 +1,6 @@
 // Software License Agreement (BSD License)
 //
-// Copyright (c) 2010-2014, Deusty, LLC
+// Copyright (c) 2010-2015, Deusty, LLC
 // All rights reserved.
 //
 // Redistribution and use of this software in source and binary forms,
@@ -12,6 +12,11 @@
 // * Neither the name of Deusty nor the names of its contributors may be used
 //   to endorse or promote products derived from this software without specific
 //   prior written permission of Deusty, LLC.
+
+// Disable legacy macros
+#ifndef DD_LEGACY_MACROS
+    #define DD_LEGACY_MACROS 0
+#endif
 
 #import "DDLog.h"
 
@@ -303,10 +308,10 @@ static NSUInteger _numProcessors;
 + (void)log:(BOOL)asynchronous
       level:(DDLogLevel)level
        flag:(DDLogFlag)flag
-    context:(int)context
+    context:(NSInteger)context
        file:(const char *)file
    function:(const char *)function
-       line:(int)line
+       line:(NSUInteger)line
         tag:(id)tag
      format:(NSString *)format, ... {
     va_list args;
@@ -332,10 +337,10 @@ static NSUInteger _numProcessors;
 + (void)log:(BOOL)asynchronous
       level:(DDLogLevel)level
        flag:(DDLogFlag)flag
-    context:(int)context
+    context:(NSInteger)context
        file:(const char *)file
    function:(const char *)function
-       line:(int)line
+       line:(NSUInteger)line
         tag:(id)tag
      format:(NSString *)format
        args:(va_list)args {
@@ -358,10 +363,10 @@ static NSUInteger _numProcessors;
     message:(NSString *)message
       level:(DDLogLevel)level
        flag:(DDLogFlag)flag
-    context:(int)context
+    context:(NSInteger)context
        file:(const char *)file
    function:(const char *)function
-       line:(int)line
+       line:(NSUInteger)line
         tag:(id)tag {
     
     DDLogMessage *logMessage = [[DDLogMessage alloc] initWithMessage:message
@@ -372,7 +377,7 @@ static NSUInteger _numProcessors;
                                                             function:[NSString stringWithFormat:@"%s", function]
                                                                 line:line
                                                                  tag:tag
-                                                             options:0
+                                                             options:(DDLogMessageOptions)0
                                                            timestamp:nil];
     
     [self queueLogMessage:logMessage asynchronously:asynchronous];
@@ -525,7 +530,7 @@ static NSUInteger _numProcessors;
     if ([self isRegisteredClass:aClass]) {
         return [aClass ddLogLevel];
     }
-    return -1;
+    return (DDLogLevel)-1;
 }
 
 + (DDLogLevel)levelForClassWithName:(NSString *)aClassName {
@@ -881,7 +886,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy) {
 - (instancetype)initWithMessage:(NSString *)message
                           level:(DDLogLevel)level
                            flag:(DDLogFlag)flag
-                        context:(NSUInteger)context
+                        context:(NSInteger)context
                            file:(NSString *)file
                        function:(NSString *)function
                            line:(NSUInteger)line
@@ -889,7 +894,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy) {
                         options:(DDLogMessageOptions)options
                       timestamp:(NSDate *)timestamp {
     if ((self = [super init])) {
-        _message      = message;
+        _message      = [message copy];
         _level        = level;
         _flag         = flag;
         _context      = context;
