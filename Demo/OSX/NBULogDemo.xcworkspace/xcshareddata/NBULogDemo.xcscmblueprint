@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C3785C16E2BA26A17DD8F6393FCB036FE5D1A8B0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C3785C16E2BA26A17DD8F6393FCB036FE5D1A8B0" : 0,
+    "1CE69B63641D4BDEE596AA3BE34F2C59B2C2B1C4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "58E8D12E-8B05-4447-8364-7D451B560048",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C3785C16E2BA26A17DD8F6393FCB036FE5D1A8B0" : "NBULog",
+    "1CE69B63641D4BDEE596AA3BE34F2C59B2C2B1C4" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NBULogDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Demo\/OSX\/NBULogDemo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:CyberAgent\/NBULog.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C3785C16E2BA26A17DD8F6393FCB036FE5D1A8B0"
+    }
+  ]
+}

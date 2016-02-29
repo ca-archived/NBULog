@@ -131,7 +131,7 @@
 		E5C4BA6A19CAE60A003250FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "CyberAgent Inc.";
 				TargetAttributes = {
 					E5C4BA7119CAE60A003250FB = {
@@ -250,6 +250,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -315,6 +316,7 @@
 				GCC_PREFIX_HEADER = "NBULogDemo/NBULogDemo-Prefix.pch";
 				INFOPLIST_FILE = NBULogDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.cyberagent.nbu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -328,6 +330,7 @@
 				GCC_PREFIX_HEADER = "NBULogDemo/NBULogDemo-Prefix.pch";
 				INFOPLIST_FILE = NBULogDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.cyberagent.nbu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
