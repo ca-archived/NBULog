@@ -11,3 +11,14 @@ pod 'LumberjackConsole'
 # For development
 pod 'NBULog', :path => '../../'
 
+post_install do |installer_representation|
+    installer_representation.pods_project.targets.each do |target|
+        if target.name == "NBULog"
+            target.build_configurations.each do |config|
+                if config.name == "Debug"
+                    config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'NBU_SHOW_DASHBOARD=1']
+                end
+            end
+        end
+    end
+end
