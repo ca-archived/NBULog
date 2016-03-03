@@ -574,6 +574,24 @@
 			};
 			name = Release;
 		};
+		AA547332A5F51FABC56B5C6950509F7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4128DFEEF82E6EB9C75AE097C50C0BCA /* NBULog.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/NBULog/NBULog-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
 		CCC930BC1C301C6F9DAF7101C498581B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -610,28 +628,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		CFC8C7B786330C85F7EF8B5F46227F0A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4128DFEEF82E6EB9C75AE097C50C0BCA /* NBULog.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/NBULog/NBULog-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"NBU_SHOW_DASHBOARD=1",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -705,7 +701,7 @@
 		6503B280E91BDF4DBB42C13534E4207A /* Build configuration list for PBXNativeTarget "NBULog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CFC8C7B786330C85F7EF8B5F46227F0A /* Debug */,
+				AA547332A5F51FABC56B5C6950509F7B /* Debug */,
 				D8025A14FD433D16782AD4231E2D770C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
