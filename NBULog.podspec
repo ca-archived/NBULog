@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     s.source_files  = 'Source/*.{h,m}'
     s.preserve_paths = "README.md", "NOTICE"
     
-    s.dependency 'CocoaLumberjack', '>= 2.0.0'
+    s.dependency 'CocoaLumberjack', '>= 2.3.0'
 
 end
 
