@@ -5,7 +5,7 @@ This application makes use of the following third party libraries:
 
 Software License Agreement (BSD License)
 
-Copyright (c) 2010-2015, Deusty, LLC
+Copyright (c) 2010-2016, Deusty, LLC
 All rights reserved.
 
 Redistribution and use of this software in source and binary forms,
@@ -213,7 +213,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright 2012-2015 CyberAgent Inc.
+   Copyright (c) 2012-2016 CyberAgent Inc.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
