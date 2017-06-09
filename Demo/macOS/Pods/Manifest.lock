@@ -1,0 +1,24 @@
+PODS:
+  - CocoaLumberjack (3.2.0):
+    - CocoaLumberjack/Default (= 3.2.0)
+    - CocoaLumberjack/Extensions (= 3.2.0)
+  - CocoaLumberjack/Default (3.2.0)
+  - CocoaLumberjack/Extensions (3.2.0):
+    - CocoaLumberjack/Default
+  - NBULog (2.0.0):
+    - CocoaLumberjack (>= 3.x)
+
+DEPENDENCIES:
+  - NBULog (from `../../`)
+
+EXTERNAL SOURCES:
+  NBULog:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
+  NBULog: c0b452546107cdfc994ce5537b9debd19353f49a
+
+PODFILE CHECKSUM: ddac8a04ec0c2c9f15d204963c7d24bcc163e243
+
+COCOAPODS: 1.2.1
