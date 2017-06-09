@@ -7,7 +7,7 @@ target 'NBULogDemo' do
     #pod 'NBULog'
 
     # Optional for on-device log console
-    pod 'LumberjackConsole', :git => 'https://github.com/PTEz/LumberjackConsole.git'
+    pod 'LumberjackConsole'
 
     # For development
     pod 'NBULog', :path => '../../'
