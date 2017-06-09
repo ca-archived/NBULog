@@ -1,5 +1,9 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CocoaLumberjack" "${PODS_ROOT}/Headers/Public/LumberjackConsole" "${PODS_ROOT}/Headers/Public/NBUCore" "${PODS_ROOT}/Headers/Public/NBULog"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/CocoaLumberjack" "$PODS_CONFIGURATION_BUILD_DIR/LumberjackConsole" "$PODS_CONFIGURATION_BUILD_DIR/NBUCore" "$PODS_CONFIGURATION_BUILD_DIR/NBULog"
 OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CocoaLumberjack" -isystem "${PODS_ROOT}/Headers/Public/LumberjackConsole" -isystem "${PODS_ROOT}/Headers/Public/NBUCore" -isystem "${PODS_ROOT}/Headers/Public/NBULog"
 OTHER_LDFLAGS = $(inherited) -ObjC -l"CocoaLumberjack" -l"LumberjackConsole" -l"NBUCore" -l"NBULog"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods

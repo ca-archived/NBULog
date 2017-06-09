@@ -3,7 +3,7 @@ LumberjackConsole
 =================
 
 [![Platform: iOS](https://img.shields.io/cocoapods/p/LumberjackConsole.svg?style=flat)](http://cocoadocs.org/docsets/LumberjackConsole/)
-[![Version: 2.4.3](https://img.shields.io/cocoapods/v/LumberjackConsole.svg?style=flat)](http://cocoadocs.org/docsets/LumberjackConsole/)
+[![Version: 3.0.0](https://img.shields.io/cocoapods/v/LumberjackConsole.svg?style=flat)](http://cocoadocs.org/docsets/LumberjackConsole/)
 [![License: Apache 2.0](https://img.shields.io/cocoapods/l/LumberjackConsole.svg?style=flat)](http://cocoadocs.org/docsets/LumberjackConsole/)
 [![Dependency Status](https://www.versioneye.com/objective-c/LumberjackConsole/badge.svg?style=flat)](https://www.versioneye.com/objective-c/LumberjackConsole)
 [![Build Status](http://img.shields.io/travis/PTEz/LumberjackConsole/master.svg?style=flat)](https://travis-ci.org/PTEz/LumberjackConsole)
@@ -91,7 +91,7 @@ Your log level settings are saved to `NSUserDefaults`.
 
 ## License
 
-    Copyright 2013-2015 Ernesto Rivera
+    Copyright 2013-2017 PTEz.
     
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License. 

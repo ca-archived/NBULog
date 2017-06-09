@@ -1,22 +1,24 @@
 
-platform :ios, '5.0'
+platform :ios, '8.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
-# For regular projects
-#pod 'NBULog'
+target 'NBULogDemo' do
+    # For regular projects
+    #pod 'NBULog'
 
-# Optional for on-device log console
-pod 'LumberjackConsole'
+    # Optional for on-device log console
+    pod 'LumberjackConsole', :git => 'https://github.com/PTEz/LumberjackConsole.git'
 
-# For development
-pod 'NBULog', :path => '../../'
+    # For development
+    pod 'NBULog', :path => '../../'
 
-post_install do |installer_representation|
-    installer_representation.pods_project.targets.each do |target|
-        if target.name == "NBULog"
-            target.build_configurations.each do |config|
-                if config.name == "Debug"
-                    config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'NBU_SHOW_DASHBOARD=1']
+    post_install do |installer_representation|
+        installer_representation.pods_project.targets.each do |target|
+            if target.name == "NBULog"
+                target.build_configurations.each do |config|
+                    if config.name == "Debug"
+                        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'NBU_SHOW_DASHBOARD=1']
+                    end
                 end
             end
         end

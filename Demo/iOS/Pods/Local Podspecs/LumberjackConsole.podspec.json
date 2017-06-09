@@ -1,7 +1,7 @@
 {
   "name": "LumberjackConsole",
-  "version": "1.0.0",
-  "summary": "On-device CocoaLumberjack console with support for search, filters and more.",
+  "version": "3.0.0",
+  "summary": "On-device CocoaLumberjack console with support for search, adjust levels, copying and more.",
   "homepage": "http://ptez.github.io/LumberjackConsole",
   "license": {
     "type": "Apache License, Version 2.0",
@@ -17,7 +17,7 @@
   ],
   "source": {
     "git": "https://github.com/PTEz/LumberjackConsole.git",
-    "tag": "1.0.0"
+    "tag": "3.0.0"
   },
   "platforms": {
     "ios": "5.0"
@@ -29,25 +29,12 @@
   ],
   "dependencies": {
     "NBUCore": [
-      ">= 2.0.0"
+      ">= 2.0.5"
     ],
     "CocoaLumberjack": [
-      ">= 1.6.3"
-    ],
-    "LumberjackConsole/Base": [
-
+      ">= 3.x"
     ]
   },
-  "subspecs": [
-    {
-      "name": "Base",
-      "source_files": "Source/*.{h,m}",
-      "resources": "Source/*.{xib}"
-    },
-    {
-      "name": "AdjustLevels",
-      "source_files": "Source/Adjust Levels/*.{h,m}",
-      "resources": "Source/Adjust Levels/*.{xib}"
-    }
-  ]
+  "source_files": "Source/*.{h,m}",
+  "resources": "Source/*.{storyboard}"
 }
