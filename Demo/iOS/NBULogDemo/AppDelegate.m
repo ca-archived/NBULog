@@ -21,7 +21,7 @@
 #import "AppDelegate.h"
 #import "MockNetworkModule.h"
 
-void testCLogs();
+void testCLogs(void);
 
 @implementation AppDelegate
 

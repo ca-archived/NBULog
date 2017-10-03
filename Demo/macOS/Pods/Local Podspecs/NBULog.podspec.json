@@ -1,6 +1,6 @@
 {
   "name": "NBULog",
-  "version": "2.0.0",
+  "version": "2.5.0",
   "summary": "Log framework based on CocoaLumberjack. Adds dynamic log levels, modules' support and eases usage.",
   "homepage": "http://cyberagent.github.io/NBULog/",
   "license": {
@@ -18,21 +18,41 @@
   ],
   "source": {
     "git": "https://github.com/CyberAgent/NBULog.git",
-    "tag": "2.0.0"
+    "tag": "2.5.0"
   },
   "platforms": {
-    "ios": "5.0",
+    "ios": "8.0",
     "osx": "10.7"
   },
   "requires_arc": true,
-  "source_files": "Source/*.{h,m}",
   "preserve_paths": [
     "README.md",
     "NOTICE"
   ],
+  "default_subspecs": "Base",
   "dependencies": {
     "CocoaLumberjack": [
       ">= 3.x"
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "Base",
+      "source_files": "Source/*.{h,m}"
+    },
+    {
+      "name": "Console",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "dependencies": {
+        "NBULog/Base": [
+
+        ],
+        "LumberjackConsole": [
+          ">= 3.x"
+        ]
+      }
+    }
+  ]
 }

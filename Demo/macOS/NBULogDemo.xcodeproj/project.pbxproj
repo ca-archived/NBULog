@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A86019B643D827DE1EB3C35F /* libPods-NBULogDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E7BBED5541621F1ACEE4CA /* libPods-NBULogDemo.a */; };
+		3FCFB268650DA161305A1033 /* Pods_NBULogDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A70AFB17EFA1A034085DA93 /* Pods_NBULogDemo.framework */; };
 		E5ABB5C319F5176B0054B6BC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5ABB5C219F5176B0054B6BC /* MainMenu.xib */; };
 		E5ABB5C719F519F00054B6BC /* MockNetworkModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ABB5C619F519F00054B6BC /* MockNetworkModule.m */; };
 		E5C4BA7819CAE60A003250FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C4BA7719CAE60A003250FB /* main.m */; };
@@ -16,9 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A70AFB17EFA1A034085DA93 /* Pods_NBULogDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBULogDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		697B634A9EDFC6A434D4F610 /* Pods-NBULogDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBULogDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NBULogDemo/Pods-NBULogDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D49D05CE0AE233B5B83D4E6F /* Pods-NBULogDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBULogDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBULogDemo/Pods-NBULogDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		D8E7BBED5541621F1ACEE4CA /* libPods-NBULogDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NBULogDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5ABB5C219F5176B0054B6BC /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		E5ABB5C419F519760054B6BC /* NBULogDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NBULogDemo-Prefix.pch"; sourceTree = "<group>"; };
 		E5ABB5C519F519F00054B6BC /* MockNetworkModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MockNetworkModule.h; path = ../../iOS/NBULogDemo/MockNetworkModule.h; sourceTree = "<group>"; };
@@ -36,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A86019B643D827DE1EB3C35F /* libPods-NBULogDemo.a in Frameworks */,
+				3FCFB268650DA161305A1033 /* Pods_NBULogDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +46,7 @@
 		2509E5BCAA42494DB6C24C04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D8E7BBED5541621F1ACEE4CA /* libPods-NBULogDemo.a */,
+				5A70AFB17EFA1A034085DA93 /* Pods_NBULogDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,7 +131,7 @@
 		E5C4BA6A19CAE60A003250FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "CyberAgent Inc.";
 				TargetAttributes = {
 					E5C4BA7119CAE60A003250FB = {
@@ -175,9 +175,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NBULogDemo/Pods-NBULogDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/NBULog/NBULog.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NBULog.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -190,13 +195,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NBULogDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FEFEB76B299D407EB14E2B83 /* [CP] Copy Pods Resources */ = {
@@ -238,14 +246,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -283,14 +297,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
