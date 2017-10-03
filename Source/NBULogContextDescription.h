@@ -21,7 +21,7 @@
 #import "NBULog.h"
 
 /// NBULogContextDescription blocks.
-typedef DDLogLevel (^NBULogContextLevelBlock)();
+typedef DDLogLevel (^NBULogContextLevelBlock)(void);
 typedef void (^NBULogSetContextLevelBlock)(DDLogLevel level);
 typedef DDLogLevel (^NBULogContextLevelForModuleBlock)(int module);
 typedef void (^NBULogSetContextLevelForModuleBlock)(int module, DDLogLevel level);

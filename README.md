@@ -95,12 +95,13 @@ When [LumberjackConsole](https://github.com/PTEz/LumberjackConsole) is present y
 Add `pod 'NBULog'` to your [CocoaPods](http://cocoapods.org)' [Podfile](http://guides.cocoapods.org/syntax/podfile.html):
 
 ```ruby
-platform :ios, '5.0'
+platform :ios, '8.0'
+use_frameworks!
 
 pod 'NBULog'
 
 # Optional on-device console
-pod 'LumberjackConsole'
+pod 'NBULog/Console'
 ```
 
 ## Documentation

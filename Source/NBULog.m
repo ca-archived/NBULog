@@ -24,7 +24,7 @@
 #import <CocoaLumberjack/DDTTYLogger.h>
 #import <CocoaLumberjack/DDFileLogger.h>
 #import <CocoaLumberjack/DDASLLogger.h>
-#if defined(NBU_SHOW_DASHBOARD)
+#if __has_include(<LumberjackConsole/PTEDashboard.h>)
     #import <LumberjackConsole/PTEDashboard.h>
 #endif
 
@@ -121,7 +121,7 @@ static id<DDLogFormatter> _nbuLogFormatter;
 
 + (void)addDashboardLogger
 {
-#if defined(NBU_SHOW_DASHBOARD)
+#if __has_include(<LumberjackConsole/PTEDashboard.h>)
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^
                   {
