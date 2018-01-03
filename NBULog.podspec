@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.source        = { :git => "https://github.com/CyberAgent/NBULog.git", :tag => "#{s.version}" }
     
     s.ios.deployment_target = '8.0'
-    s.osx.deployment_target = '10.7'
+    s.osx.deployment_target = '10.9'
     s.requires_arc  = true
     s.preserve_paths = "README.md", "NOTICE"
     
