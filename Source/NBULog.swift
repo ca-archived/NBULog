@@ -51,6 +51,6 @@ public func NBULogDebug(_ message: @autoclosure () -> String)
 
 public func NBULogVerbose(_ message: @autoclosure () -> String)
 {
-    LogMaybe(message, flag: .error)
+    LogMaybe(message, flag: .verbose)
 }
 
